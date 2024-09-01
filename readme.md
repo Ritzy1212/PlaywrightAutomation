@@ -16,3 +16,8 @@
 
 ## To run specfic test
 ### npx playwright test tests/example.spec.ts
+
+## To Skip all tests or run only selected ones
+### Tag test with .skip (test.skip())
+### Tag test with .only (test.only())
+
