@@ -14,3 +14,34 @@ test('Simple basic test', async ({ page }) => {
     const errorMessage = await page.locator('.alert-error')
     await expect(errorMessage).toContainText('Login and/or password are wrong.')
   })
+
+  test.skip('Selectors', async ({ page }) => {
+    // text
+    await page.click('text=some text')
+  
+    // Css Selectors
+    await page.click('button')
+    await page.click('#id')
+    await page.click('.class')
+  
+    // Only visible Css Selector
+    await page.click('.submit-button:visible')
+  
+    // Combinations
+    await page.click('#username .first')
+  
+    // XPath
+    await page.click('//button')
+  })
+
+  test('Working with Inputs', async ({ page }) => {
+    await page.goto('http://zero.webappsecurity.com/index.html')
+    await page.click('#signin_button')
+
+    await page.type('#user_login', 'some username')
+    await page.type('#user_password', 'some password')
+    await page.click('text=Sign in')
+
+    const errorMessage = await page.locator('.alert-error')
+    await expect(errorMessage).toContainText('Login and/or password are wrong.')
+  })
