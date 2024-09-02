@@ -33,3 +33,11 @@
 ### create the config file, playwright.config.ts
 ### To run, npx playwright test --config=playwright.config.ts
 ### To specify a project (this can have settings i'e browser to run), npx playwright test --config=playwright.config.ts --project=Webkit
+
+## To attach reports
+### Just post-fix the cli command with, 
+#### --reporter=line OR
+#### --reporter=list (default) OR
+#### --reporter=dot OR
+#### --reporter=junit OR
+#### --reporter=html
