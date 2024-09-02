@@ -21,3 +21,11 @@
 ### Tag test with .skip (test.skip())
 ### Tag test with .only (test.only())
 
+### To tag tests and run them by tags
+## add a tag to the test title i'e myTag
+## then run in cli, npx playwright test --grep myTag
+## or to ignore all tag tests and run all others, npx playwright test --grep-invert myTag
+
+## See documentation
+### https://playwright.dev/docs/test-cli
+
