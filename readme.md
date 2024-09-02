@@ -29,3 +29,7 @@
 ## See documentation
 ### https://playwright.dev/docs/test-cli
 
+## Using playwright config files
+### create the config file, playwright.config.ts
+### To run, npx playwright test --config=playwright.config.ts
+### To specify a project (this can have settings i'e browser to run), npx playwright test --config=playwright.config.ts --project=Webkit
