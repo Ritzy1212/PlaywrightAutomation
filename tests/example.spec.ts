@@ -62,17 +62,23 @@ import { test, expect } from '@playwright/test'
     })
   })
 
-  test.only('Screenshots', async ({ page }) => {
-    // 1. step is load website
-    await page.goto('https://example.com/')
-    // 2. take screenshot of full page
-    await page.screenshot({ path: 'screenshot.png', fullPage: true })
-  })
-
-  test.only('Single element Screenshot', async ({ page }) => {
-    await page.goto('https://example.com/')
-    const element = await page.$('h1')
-    await element.screenshot({ path: 'single_element_screenshot.png' })
+  test.describe.only('Hooks', () => {
+    test.beforeEach(async ({ page }) => {
+      await page.goto('https://example.com/')
+    })
+  
+    test('Screenshots', async ({ page }) => {
+      // 1. step is load website
+      // await page.goto('https://example.com/')
+      // 2. take screenshot of full page
+      await page.screenshot({ path: 'screenshot.png', fullPage: true })
+    })
+  
+    test('Single element Screenshot', async ({ page }) => {
+      // await page.goto('https://example.com/')
+      const element = await page.$('h1')
+      await element.screenshot({ path: 'single_element_screenshot.png' })
+    })
   })
 
  
