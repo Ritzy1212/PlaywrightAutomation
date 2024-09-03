@@ -64,7 +64,7 @@ import { loadHomepage, assertTitle } from '../helpers'
     })
   })
 
-  test.describe('Hooks', () => {
+  test.describe.parallel.only('Hooks', () => {
     test.beforeEach(async ({ page }) => {
       await page.goto('https://example.com/')
     })
@@ -83,7 +83,7 @@ import { loadHomepage, assertTitle } from '../helpers'
     })
   })
 
-  test.only('Custom Helpers', async ({ page }) => {
+  test('Custom Helpers', async ({ page }) => {
     await loadHomepage(page)
     // await page.pause()
     await assertTitle(page)
