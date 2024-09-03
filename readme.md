@@ -41,3 +41,8 @@
 #### --reporter=dot OR
 #### --reporter=junit OR
 #### --reporter=html
+
+## When defining scripts in package.json, we can then run scripts using,
+### e.g. npm run tests:chrome 
+### to override settings in scripts, we can just add the seting on the end,
+### e.g. npm run tests:chrome -- --headed
