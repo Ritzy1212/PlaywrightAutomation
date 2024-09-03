@@ -46,3 +46,8 @@
 ### e.g. npm run tests:chrome 
 ### to override settings in scripts, we can just add the seting on the end,
 ### e.g. npm run tests:chrome -- --headed
+
+## Playwright inspector
+### To do this just add a await page.pause() and the script will pause at this point showin the playwright inspector
+### Ensure that you comment or delete this before production
+ 
