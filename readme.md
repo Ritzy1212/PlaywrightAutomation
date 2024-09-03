@@ -50,4 +50,7 @@
 ## Playwright inspector
 ### To do this just add a await page.pause() and the script will pause at this point showin the playwright inspector
 ### Ensure that you comment or delete this before production
- 
+
+## To capture an artifcat on faile go to playwright.config file and change the following settings,
+### video: 'off'
+### screenshot: 'off'

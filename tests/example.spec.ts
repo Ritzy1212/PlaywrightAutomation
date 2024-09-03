@@ -85,6 +85,6 @@ import { loadHomepage, assertTitle } from '../helpers'
 
   test.only('Custom Helpers', async ({ page }) => {
     await loadHomepage(page)
-    await page.pause()
+    // await page.pause()
     await assertTitle(page)
   })
