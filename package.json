@@ -10,13 +10,23 @@
     "tests:e2e:chrome": "playwright test --config=e2e.config.ts --project=Chromium",
     "tests:e2e:firefox": "playwright test --config=e2e.config.ts --project=Firefox",
     "tests:e2e:webkit": "playwright test --config=e2e.config.ts --project=Webkit",
+
     "tests:visual:chrome": "playwright test --config=visual.config.ts --project=Chromium",
     "tests:visual:firefox": "playwright test --config=visual.config.ts --project=Firefox",
     "tests:visual:webkit": "playwright test --config=visual.config.ts --project=Webkit",
     "tests:visual:chrome:update": "playwright test --config=visual.config.ts --project=Chromium --update-snapshots",
     "tests:visual:firefox:update": "playwright test --config=visual.config.ts --project=Firefox --update-snapshots",
     "tests:visual:webkit:update": "playwright test --config=visual.config.ts --project=Webkit --update-snapshots",
-    "tests:api": "playwright test --config=api.config.ts --project=Chromium"
+    
+    "tests:api": "playwright test --config=api.config.ts --project=Chromium tests/api/",
+    "tests:api:example": "playwright test --config=api.config.ts --project=Chromium tests/api/users/api.spec.ts",
+    "tests:api:post": "playwright test --config=api.config.ts --project=Chromium tests/api/users/api-post.spec.ts",
+    "tests:api:put": "playwright test --config=api.config.ts --project=Chromium tests/api/users/api-put.spec.ts",
+    "tests:api:delete": "playwright test --config=api.config.ts --project=Chromium tests/api/users/api-delete.spec.ts",
+    "tests:api:get": "playwright test --config=api.config.ts --project=Chromium tests/api/users/api-get.spec.ts",
+    "tests:api:getall": "playwright test --config=api.config.ts --project=Chromium tests/api/users/api-getall.spec.ts",
+        
+    "tests:api:postlogin": "playwright test --config=api.config.ts --project=Chromium tests/api/login/api-post.spec.ts"
   },
   "author": "Ritesh",
   "license": "ISC",
